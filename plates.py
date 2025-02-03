@@ -7,17 +7,25 @@ def main():
 
 
 def is_valid(s):
-    return starts_with_two_letters(s) and max_six_min_two(s) and numbers_at_end(s) and no_punct(s)
+    return (
+        starts_with_two_letters(s)
+        and max_six_min_two(s)
+        and numbers_at_end(s)
+        and no_punct(s)
+    )
+
 
 def starts_with_two_letters(s):
     return s[:1].isalpha()
 
+
 def max_six_min_two(s):
     return 1 < len(s) < 7
 
+
 def numbers_at_end(s):
-    
-    #find first number
+
+    # find first number
 
     for i in range(len(s)):
         char = s[i]
@@ -27,7 +35,7 @@ def numbers_at_end(s):
             if char == "0":
                 return False
             return s[i:].isnumeric()
-    
+
     # if no numbers assume valid
     return True
 
