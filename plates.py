@@ -16,7 +16,7 @@ def is_valid(s):
 
 
 def starts_with_two_letters(s):
-    return s[:1].isalpha()
+    return s[:2].isalpha()
 
 
 def max_six_min_two(s):
